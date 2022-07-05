@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  
+  <h1 style="color:aliceblue ; text-align:center; font-size: 40px;">Vaccine Finder</h1>
+  <p style="text-align: center; color:antiquewhite; font-weight:lighter ">Enter Pincode of your area and desired date and check avaliable slots</p>
+  <br>
+    <p style="text-align: center;"><img src="../static/covid.gif" alt="COVID-19 Vaccine Finder" width="270" height="250" /></p>
+
+  <form action="{{url_for('search')}}" method="post" class="form-main">
+    <input type="text" name="pincode" id="pincode" placeholder="PIN: XXXXXX" required>
+    <input type="text" name="date" id="date" placeholder="DATE: DD-MM-YYYY" required>
+    <button href="/search" id="submit" type="submit">Search</button><br>
+  </form><br>
+
+  
+{% endblock %}
